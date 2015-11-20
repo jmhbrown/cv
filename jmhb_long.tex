@@ -1,0 +1,63 @@
+\documentclass[10pt,letterpaper,sans,final]{moderncv}
+\moderncvtheme{classic}
+\moderncvcolor{blue}
+\usepackage[scale=0.75]{geometry}
+\usepackage{biblatex}
+
+\name{Jennifer}{Brown}
+\email{jmb347@georgetown.edu}
+
+\addbibresource{jmhb_long.bib}
+% Taken from http://tex.stackexchange.com/questions/123805/creating-bibliographies-with-biblatex-and-moderncv
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelnumberwidth]{
+        \printfield{prefixnumber}%
+        \printfield{labelnumber}}}%
+     {\setlength{\topsep}{0pt}%
+      \setlength{\labelwidth}{\hintscolumnwidth}%
+      \setlength{\labelsep}{\separatorcolumnwidth}%
+      \leftmargin\labelwidth%
+      \advance\leftmargin\labelsep}%
+      \sloppy\clubpenalty4000\widowpenalty4000}
+  {\endlist}
+  {\item}
+
+\begin{document}
+
+\makecvtitle
+\section{Education}
+\cventry{2010-2013}{B.Sc. Mathematics \& Physics}{Georgetown University}{Washington, DC}{}{\textit{Cum Laude, Pi Mu Epsilon Honors}}
+
+\nocite{*}
+\printbibliography[title={Publications}]
+
+\section{Relevant Coursework}
+\cvitem{Mathematics}{Differential Geometry, Statistics, Abstract Algebra, Linear Algebra, Cryptography, Multivariate Calculus, Analysis I, Fourier Analysis}
+\cvitem{Physics}{Mathematical Methods in Physics, Quantum Mechanics I, Particle Physics, Statistical Physics, Intermediate Classical Mechanics, Intermediate Electricity and Magnetism, Experimental Physics (Circuit Design), Solid State Technology and Microelectronics.}
+
+\section{Computer Skills}
+\cvitem{Languages}{ruby, java, python, bash}
+\cvitem{Data Storage}{mysql, hadoop, hbase}
+
+\section{Languages}
+\cvlanguage{English}{native language}{}
+\cvlanguage{French}{intermediate (reading, writing); basic (speaking)}{}
+\cvlanguage{Asanti Twi}{basic (reading, writing, speaking)}{}
+
+\section{Experience}
+\cventry{8/2013 - Current}{Infrastructure Engineer}{Opower Inc.}{San Francisco, CA}{}{Designing and managing hadoop based distributed compute and storage infrastructure. Built-out monitoring and provisioning systems, maintained tooling and cluster job code in Java, Ruby, Python and Bash.\newline{}}
+
+\cventry{8/2012 - 5/2013}{Research Assistant}{Georgetown University Physics Department}{Washington, DC}{}{Implemented and adapted computationally efficient simulations of ultracold gases on optical lattices. Ran simulations on supercomputing cluster, curated and interpreted datasets.\newline{}}
+
+\cventry{6/2012 - 8/2012}{Summer Intern}{CERN - LHCb}{Meyrin, Switzerland}{}{Worked in preparation for the 2013 LHC upgrade. Prototyped custom networking hardware for measuring network latencies with nanosecond accuracy using FPGAs. Synthesized and tested firmware, presented work in an internal communication.\newline{}}
+
+\cventry{11/2010 - 8/2012}{Research Assistant}{Georgetown University Mathematics Department}{Washington, DC}{}{Researched affects of migration on the genetic architecture of populations, specifically the phenomenon of mutation surfing. Designed computer simulations, interpreted results and worked on data processing. Presented results in regular reports and at a conference.\newline{}}
+
+\cventry{9/2011 - 12/2011}{Math and Physics Tutor}{State Department - EducationUSA Accra}{Accra, Ghana}{}{Taught introductory mathematics and physics in classroom settings and with small groups. Advised Ghanaian high school graduates pursuing higher education in the United States.\newline{}}
+
+\cventry{5/2010 - 8/2010}{Trekking Co-Director}{Boy Scouts of America}{Long Barn, CA}{}{Organized and ran week-long backpacking trips in the California's Sierra Nevadas. Specific responsibilities included all meal planning and preparation, route setting, coordination with base camp staff, wilderness medical care, organizing service projects and educational programs.\newline{}}
+
+\cventry{Summers of 2008, 2007}{Sports Director, Head Stewart}{Boy Scouts of America}{Long Barn, CA}{}{Lead a small team in designing and running outdoor educational programs. Managed inventories, organized meals for 200+ scouts in cooperation with kitchen staff. Administered first aid and organized service projects.\newline{}}
+
+\end{document}
